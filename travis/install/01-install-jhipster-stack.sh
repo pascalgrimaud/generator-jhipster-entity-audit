@@ -20,14 +20,14 @@ elif [ "$JHIPSTER_BRANCH" != "master" ]; then
     git checkout -b $JHIPSTER_BRANCH origin/$JHIPSTER_BRANCH
 fi
 git --no-pager log -n 10 --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-npm install
-npm link
+yarn install
+yarn link
 
 #-------------------------------------------------------------------------------
 # Install JHipster
 #-------------------------------------------------------------------------------
 cd "$TRAVIS_BUILD_DIR"
-npm link generator-jhipster
-npm install
-npm link
-npm run lint
+yarn link generator-jhipster
+yarn install
+yarn link
+yarn run lint
