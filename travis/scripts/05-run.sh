@@ -74,6 +74,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+ls -al /home/travis/app/node_modules/
+ls -al /home/travis/app/node_modules/webdriver-manager/
+ls -al /home/travis/app/node_modules/webdriver-manager/selenium/
+
 #-------------------------------------------------------------------------------
 # Run the application
 #-------------------------------------------------------------------------------
